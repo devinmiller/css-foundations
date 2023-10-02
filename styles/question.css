@@ -1,0 +1,27 @@
+@import "./base.css";
+
+.flashcard__header {
+  background-color: var(--confidence-level-unknown);
+  height: 3em;
+  border-radius: 5px 5px 0 0;
+}
+
+.flashcard__question {
+  background-color: var(--color-secondary);
+  min-height: 600px;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+}
+
+.flashcard__question > div {
+  font-size: 3em;
+  opacity: 20%;
+}
+
+.flashcard__question > p {
+  font-size: 4em;
+  align-self: center;
+  justify-self: center;
+}
