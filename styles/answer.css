@@ -1,0 +1,52 @@
+@import "./base.css";
+
+.flashcard__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr auto min-content 2fr;
+}
+
+.flashcard__content hr {
+  width: 90%;
+  color: var(--color-primary);
+}
+
+.confidence__wrapper {
+  margin: 3em 0;
+  text-align: center;
+  width: 600px;
+}
+
+.confidence__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.confidence__buttons .button {
+  border: none;
+  border-radius: 50%;
+  color: var(--color-text-on-confidence);
+  font-size: 1em;
+  height: 80px;
+  width: 80px;
+}
+
+.button--confidence-level-1 {
+  background-color: var(--confidence-level-1);
+}
+
+.button--confidence-level-2 {
+  background-color: var(--confidence-level-2);
+}
+
+.button--confidence-level-3 {
+  background-color: var(--confidence-level-3);
+}
+
+.button--confidence-level-4 {
+  background-color: var(--confidence-level-4);
+}
+
+.button--confidence-level-5 {
+  background-color: var(--confidence-level-5);
+}

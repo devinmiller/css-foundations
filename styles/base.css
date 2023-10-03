@@ -4,8 +4,13 @@
   --color-secondary: white;
   --color-text-on-secondary: black;
 
+  --color-text-on-confidence: white;
   --confidence-level-unknown: grey;
   --confidence-level-1: purple;
+  --confidence-level-2: orange;
+  --confidence-level-3: yellow;
+  --confidence-level-4: green;
+  --confidence-level-5: blue;
 
   --font-family: "Merriweather", serif;
   --font-size: 16px;
@@ -56,7 +61,33 @@ main {
   align-items: center;
 }
 
-.main__flashcard {
+.flashcard {
+  filter: drop-shadow(5px 5px 15px var(--color-text-on-primary));
   max-width: 1200px;
   width: 100%;
+}
+
+.flashcard__header {
+  background-color: var(--confidence-level-1);
+  height: 3em;
+  border-radius: 5px 5px 0 0;
+}
+
+.flashcard__content {
+  background-color: var(--color-secondary);
+  min-height: 800px;
+  padding: 1em;
+}
+
+.flashcard__content .question__header,
+.flashcard__content .answer__header {
+  font-size: 3em;
+  opacity: 20%;
+}
+
+.flashcard__content .question__body,
+.flashcard__content .answer__body {
+  font-size: 4em;
+  align-self: center;
+  justify-self: center;
 }
