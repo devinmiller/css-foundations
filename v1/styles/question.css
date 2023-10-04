@@ -12,7 +12,7 @@
   border: none;
   color: var(--color-text-on-confidence);
   cursor: pointer;
-  font-size: 1.5em;
-  margin: 3em 0;
-  padding: 1em 10em;
+  font-size: 1.5rem;
+  padding: 1rem 0rem;
+  width: 100%;
 }

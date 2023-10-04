@@ -11,12 +11,6 @@
   color: var(--color-primary);
 }
 
-.confidence__wrapper {
-  margin: 3em 0;
-  text-align: center;
-  width: 600px;
-}
-
 .confidence__buttons {
   display: flex;
   justify-content: space-evenly;
@@ -26,7 +20,7 @@
   border: none;
   border-radius: 50%;
   color: var(--color-text-on-confidence);
-  font-size: 1em;
+  font-size: 1rem;
   height: 80px;
   width: 80px;
 }
