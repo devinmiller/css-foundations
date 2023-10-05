@@ -1,6 +1,6 @@
 :root {
-  --color-primary: lightgrey;
-  --color-text-on-primary: black;
+  --color-primary: darkslategray;
+  --color-text-on-primary: beige;
   --color-secondary: white;
   --color-text-on-secondary: black;
 
@@ -75,58 +75,75 @@ a {
   text-decoration: none;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: unset;
 }
 
-main {
-  align-items: center;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.main {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: min-content 1fr min-content;
+  padding: 1rem;
+  height: 100vh;
+}
+
+.header {
   display: flex;
-  flex-direction: column;
-  padding: 0 1rem;
+  height: 3rem;
+  justify-content: space-between;
+}
+
+.header__progress {
+  align-self: center;
+  display: inline-block;
 }
 
 .flashcard {
-  filter: drop-shadow(5px 5px 15px var(--color-text-on-primary));
-  margin: 1rem;
-  max-width: 1200px;
-  width: 100%;
+  display: grid;
+  grid-template-rows: min-content auto;
 }
 
 .flashcard__header {
-  background-color: var(--confidence-level-1);
-  height: 3em;
-  border-radius: 5px 5px 0 0;
+  justify-items: flex-start;
+  background-color: var(--confidence-level-unknown);
+  display: grid;
+  grid-template-columns: 1fr 3rem 3rem;
+  height: 3rem;
+  padding: 0 0.5rem;
+}
+
+.flashcard__header {
+  background-color: var(--confidence-level-unknown);
 }
 
 .flashcard__content {
   background-color: var(--color-secondary);
-  min-height: 800px;
+  color: var(--color-text-on-secondary);
+  min-height: 400px;
   padding: 1rem;
 }
 
-.flashcard__content .question__header,
-.flashcard__content .answer__header {
-  font-size: 3rem;
+.qa__header {
+  font-size: var(--h3);
   opacity: 20%;
 }
 
-.flashcard__content .question__body,
-.flashcard__content .answer__body {
-  font-size: 4rem;
+.qa__content {
   align-self: center;
+  font-size: var(--h3);
   justify-self: center;
 }
 
-.button__wrapper {
-  margin: 3rem 0;
-  text-align: center;
-  max-width: 1200px;
-  width: 100%;
-}
-
-@media (max-width: 1000px) {
-  .flashcard__content {
-    min-height: 600px;
-  }
+.button__icon {
+  background-color: unset;
+  color: var(--color-text-on-confidence);
+  font-size: var(--h3);
+  width: 3rem;
 }

@@ -17,13 +17,11 @@
 
 <body>
     <main class="main">
-        <div>
-            <button>
-                <span class="material-symbols-outlined">
-                    chevron_left
-                </span>
+        <div class="header">
+            <button class="material-symbols-outlined button__icon">
+                arrow_back
             </button>
-            <div>
+            <div class="header__progress">
                 <span class="material-symbols-outlined">circle</span>
                 <span class="material-symbols-outlined">circle</span>
                 <span class="material-symbols-outlined">circle</span>
@@ -35,22 +33,29 @@
                 <span class="material-symbols-outlined">circle</span>
                 <span class="material-symbols-outlined">circle</span>
             </div>
-            <button>
-                <span class="material-symbols-outlined">
-                    settings
-                </span>
+            <button class="material-symbols-outlined button__icon">
+                settings
             </button>
-
         </div>
         <div class="flashcard">
-            <div class="flashcard__header"></div>
+            <div class="flashcard__header">
+                <button class="material-symbols-outlined button__icon">
+                    bookmark
+                </button>
+                <button class="material-symbols-outlined button__icon">
+                    info
+                </button>
+                <button class="material-symbols-outlined button__icon">
+                    edit
+                </button>
+            </div>
             <div class="flashcard__content">
-                <div class="question__header">Q.</div>
-                <div class="question__body">to get on the train</div>
+                <div class="qa__header">Q.</div>
+                <div class="qa__content">to get on the train</div>
             </div>
         </div>
-        <div class="button__wrapper">
-            <input class="button" type="button" value="Reveal Answer">
+        <div class="footer">
+            <button class="button button--reveal">Reveal Answer</button>
         </div>
     </main>
 </body>
