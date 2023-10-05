@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="styles/question.css">
+    <link rel="stylesheet" href="styles/answer.css">
 </head>
 
 <body>
@@ -52,10 +52,20 @@
             <div class="flashcard__content">
                 <div class="qa__header">Q.</div>
                 <div class="qa__content">to get on the train</div>
+                <hr>
+                <div class="qa__header">A.</div>
+                <div class="qa__content">salire sul treno</div>
             </div>
         </div>
         <div class="footer">
-            <button class="button button--reveal">Reveal Answer</button>
+            <p class="confidence__header text_small">How well did you know this?</p>
+            <div class="confidence__buttons">
+                <button class="button button--confidence-level-1">1</button>
+                <button class="button button--confidence-level-2">2</button>
+                <button class="button button--confidence-level-3">3</button>
+                <button class="button button--confidence-level-4">4</button>
+                <button class="button button--confidence-level-5">5</button>
+            </div>
         </div>
     </main>
 </body>

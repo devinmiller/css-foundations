@@ -9,7 +9,7 @@
   --confidence-level-unknown: grey;
   --confidence-level-1: purple;
   --confidence-level-2: orange;
-  --confidence-level-3: yellow;
+  --confidence-level-3: gold;
   --confidence-level-4: green;
   --confidence-level-5: blue;
 
@@ -103,28 +103,38 @@ button {
 .header__progress {
   align-self: center;
   display: inline-block;
+  color: var(--confidence-level-unknown);
+}
+
+.progress--active {
+  color: var(--color-secondary);
+}
+
+.header__progress span {
+  font-size: var(--base-size);
+  vertical-align: middle;
 }
 
 .flashcard {
+  border-radius: 10px;
   display: grid;
   grid-template-rows: min-content auto;
 }
 
 .flashcard__header {
-  justify-items: flex-start;
   background-color: var(--confidence-level-unknown);
+  border-radius: 10px 10px 0 0;
   display: grid;
-  grid-template-columns: 1fr 3rem 3rem;
+  grid-template-columns: 1fr min-content min-content;
+  gap: 0.5rem;
   height: 3rem;
+  justify-items: flex-start;
   padding: 0 0.5rem;
-}
-
-.flashcard__header {
-  background-color: var(--confidence-level-unknown);
 }
 
 .flashcard__content {
   background-color: var(--color-secondary);
+  border-radius: 0 0 10px 10px;
   color: var(--color-text-on-secondary);
   min-height: 400px;
   padding: 1rem;
@@ -144,6 +154,54 @@ button {
 .button__icon {
   background-color: unset;
   color: var(--color-text-on-confidence);
-  font-size: var(--h3);
-  width: 3rem;
+  cursor: pointer;
+  font-size: var(--h4);
+}
+
+@media (min-width: 800px) {
+  .flashcard__header {
+    height: 4rem;
+  }
+
+  .button__icon {
+    font-size: var(--h3);
+  }
+
+  .qa__header {
+    font-size: var(--h2);
+  }
+
+  .qa__content {
+    font-size: var(--h2);
+  }
+
+  .header__progress span {
+    font-size: var(--h5);
+  }
+
+  .header__progress span:not(span:last-of-type) {
+    margin-inline-end: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    justify-items: center;
+    max-height: 1200px;
+  }
+
+  .header,
+  .flashcard,
+  .footer {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .qa__header {
+    font-size: var(--h1);
+  }
+
+  .qa__content {
+    font-size: var(--h1);
+  }
 }
